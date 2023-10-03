@@ -1,117 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Site de Futebol</title>
-<style>
-   
-    /*Selecionando via class*/
+    <style>
+        /*Selecionando via class*/
 
-    .palmeirasClass {
+        .container {
+            display: flex;
+            flex-direction: column;
 
-        font-size: 25px;
-        text-align: center;
+        }
 
-    }
-    .vascoClass {
+        .Container2 {
+            display: flex;
+            flex-direction: row;
 
-        font-size: 25px;
-        text-align: center;
-        display: flex;
+        }
 
-    }
+        .PalmeirasContainer {
 
-    .imagemPalmeiras{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 30px;
+            border: 5px solid green;
+            height: 500%;
+            width: 500%;
 
-        text-align: center;
+        }
+        .VascoContainer{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 30px;
+            border: 5px solid black;
+            height: 500%;
+            width: 500%;
+        }
 
-    }
+        .TextoFormulario{
+            font-size: 20px;
+            font-family: Arial;
 
-    .imagemVascos{
+        }
 
-        text-align: center;
+        .inputFormulario{
+            border-radius: 10px;
 
-    }
+        }
 
-    /*Selecionando via id*/
+        .palmeirasClass {
 
-    #palmeirasId {
+            font-size: 25px;
+            text-align: left;
+            margin: 20px;
 
-        font-size: 50px;
-        color: green;
-        text-align: center;
-    }
+        }
 
-    #vascoId{
+        .vascoClass {
 
-        color: black;
-        font-size: 50px;    
-        text-align: center;
-    }
+            font-size: 25px;
+            text-align: left;
+            margin: 20px;
 
-    /*input*/
+        }
 
-    input{
+        .imagemPalmeiras {
 
-        display: flex;
-    }
+            text-align: center;
 
-</style>
+        }
+
+        .imagemVascos {
+
+            text-align: center;
+
+        }
+
+        /*Selecionando via id*/
+
+        #palmeirasId {
+
+            font-size: 50px;
+            color: green;
+        }
+
+        #vascoId {
+
+            color: black;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        /*input*/
+        input{
+            display: flex;
+        }
+        p{
+            text-align: left;
+        }
+
+    </style>
 </head>
+
 <body>
 
-    <b><h1 id="palmeirasId"> Palmeiras </h1></b>
+    <div class="container">
+        <div class="Container2">
+            <div class="PalmeirasContainer">
+                <b>
+                    <h1 id="palmeirasId"> Palmeiras </h1>
+                </b>
 
-    <div class="imagemPalmeiras">
+                <div class="imagemPalmeiras">
 
-        <img src="./imagens/palmeiras.jpg" width="25%">
+                    <img src="./imagens/palmeiras.jpg" width="25%">
 
+                </div>
+
+                <p class="palmeirasClass">
+
+                    O Palmeiras foi fundado em 26 de agosto de 1914 por imigrantes italianos da cidade de São Paulo, com
+                    o nome de Palestra Itália.
+                    O clube foi obrigado a mudar de nome em 1942, devido à Segunda Guerra Mundial, e passou a se chamar
+                    Sociedade Esportiva Palmeiras.
+                    O Palmeiras é um dos clubes mais vencedores do Brasil, sendo o maior campeão nacional com 16
+                    títulos.
+                    Entre as maiores conquistas da sua história estão o Mundial Interclubes de 1951, as Copas
+                    Libertadores da América de 1999, 2020 e 2021, 11 Campeonatos Brasileiros e quatro Copas do Brasil.
+                </p>
+                <hr>
+            </div>
+            <div class="VascoContainer">
+                <b>
+                    <h1 id="vascoId"> Vasco </h1>
+                </b>
+
+                <div class="imagemVascos">
+                    <img src="./imagens/Vasco.jpg" width="25%">
+                </div>
+
+                <p class="vascoClass">
+
+                    O clube Vasco da Gama, como outros contemporâneos ao seu surgimento, foi fundado em
+                    função da prática esportiva do remo, muito em voga no final do século 19, mas o seu
+                    estabelecimento se deu mesmo foi com o futebol, já no século 20. 
+                    Atualmente, o impacto do Vasco na cultura carioca é tão grande que, em 2007, foi criado o “dia do Vasco”, 
+                    como uma homenagem ao clube.
+                    Fundado em 1898, na cidade do Rio de Janeiro, o clube ganhou o seu nome em homenagem ao navegador
+                    português Vasco da Gama.
+                    As cores escolhidas para simbolizar o clube foram o preto, o branco e o vermelho, estilizados na
+                    cruz de malta, símbolo do time.
+                    Foi apenas em 1916 que o Vasco passou a integrar o futebol carioca: estreou com o time na terceira
+                    divisão do campeonato carioca e, já em 1923, figurava na divisão principal.</p>
+            </div>
+        </div>
+        <br><br><br>
+
+        <div class="formulario">
+
+            <label class="TextoFormulario">Nome
+
+                <input class="inputFormulario" type="text" name="nome">
+
+                <label class="TextoFormulario">Sobrenome
+
+                    <input class="inputFormulario" type="text" name="Sobrenome">
+
+                    <label class="TextoFormulario"> Data de Nascimento
+
+                        <input class="inputFormulario"  type="Date" name="number">
+
+                    </label>
+                    <label class="TextoFormulario">Escolha um time
+                          <label> Palmeiras
+                            <input class="inputFormulario" type="date" name="time">
+                          </label>
+
+                       
+
+                    </label>
+        </div>
     </div>
+</body>
 
-    <p class="palmeirasClass">
-
-       O Palmeiras foi fundado em 26 de agosto de 1914 por imigrantes italianos da cidade de São Paulo, com o nome de Palestra Itália.<br>
-       O clube foi obrigado a mudar de nome em 1942, devido à Segunda Guerra Mundial, e passou a se chamar Sociedade Esportiva Palmeiras.<br>
-       O Palmeiras é um dos clubes mais vencedores do Brasil, sendo o maior campeão nacional com 16 títulos.<br>
-       Entre as maiores conquistas da sua história estão o Mundial Interclubes de 1951, as Copas Libertadores <br>
-       da América de 1999, 2020 e 2021, 11 Campeonatos Brasileiros e quatro Copas do Brasil.
-       </p><hr>
-
-                <b><h1 id="vascoId"> Vasco </h1></b>
-
-    <div class="imagemVascos">
-
-        <img src="./imagens/Vasco.jpg" width="25%">
-
-    </div>
-    
-    
-    <p class="vascoClass">
-
-        O clube de regatas Vasco da Gama, como outros contemporâneos ao seu surgimento, foi fundado em função da prática esportiva do remo, muito <br> em voga no final do século XIX, mas o seu estabelecimento se deu mesmo foi com o futebol, já no século XX. Atualmente, o impacto do Vasco <br>
-        na cultura carioca é tão grande que, em 2007, foi criado o “dia do Vasco”, como uma homenagem ao clube.<br>
-        Fundado em 1898, na cidade do Rio de Janeiro, o clube ganhou o seu nome em homenagem ao navegador português Vasco da Gama.<br>
-        As cores escolhidas para simbolizar o clube foram o preto, o branco e o vermelho, estilizados na cruz de malta, símbolo do time.<br>
-        Foi apenas em 1916 que o Vasco passou a integrar o futebol carioca: estreou com o time na terceira divisão do campeonato carioca e, já em 1923, figurava na divisão principal.</p><br><br><br>
-
-    <div>
-         <label>Nome
-
-            <input type="text" name="nome"> 
-
-        <label>Sobrenome
-
-            <input type="text" name="Sobrenome"> 
-
-        <label> Data de Nascimento
-
-            <input type="Date" name="number">
-
-        </label>
-        <label>Escolha um time
-
-            <input type="text" name="time">
-
-        </label>
-    </div>
 </html>
